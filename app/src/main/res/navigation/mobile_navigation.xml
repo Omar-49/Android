@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_Story">
+
+    <fragment
+        android:id="@+id/nav_Story"
+        android:name="com.example.StoryTeller.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+    <fragment
+        android:id="@+id/nav_save"
+        android:name="com.example.StoryTeller.ui.saved.SavedFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_saved" >
+        <action
+            android:id="@+id/action_nav_save_to_editSavedStoryFragment"
+            app:destination="@id/editSavedStoryFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/editSavedStoryFragment"
+        android:name="com.example.StoryTeller.ui.saved.EditSavedStoryFragment"
+        android:label="Saved Story"
+        tools:layout="@layout/fragment_edit_saved_story">
+    </fragment>
+
+</navigation>
